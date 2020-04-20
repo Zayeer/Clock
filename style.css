@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #000;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.clock {
+	border: 10px solid red;
+	border-radius: 50%;
+	height: 400px;
+	width: 400px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	opacity: 0.8px;
+	background: #fae3c8;
+	outline: none;
+}				
+
+.clock::after {
+	content: "";
+	border: 15px solid red;
+	border-radius: 50%;
+	position: absolute;
+	left: 174px;
+	top: 180px;
+	z-index: 10;
+}
+
+.hand {
+	transform-origin: bottom;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	opacity: 0.8;
+}
+
+.hour-hand {
+	border: 5px solid red;
+	height: 35%;
+	position: absolute;
+	top: 60px;
+}
+
+.minute-hand {
+	border: 5px solid red;
+	height: 45%;
+	position: absolute;
+	top: 23px;		
+}
+
+.second-hand {
+	border: 2px solid red;
+	height: 45%;
+	position: absolute;
+	top: 23px;	
+}
+
+#name {
+	color: red;
+	align-self: center;
+	margin-top: 60px;
+	font-family: 'Cookie', cursive;
+	font-weight: bold;
+}
